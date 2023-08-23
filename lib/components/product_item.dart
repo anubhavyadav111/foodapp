@@ -4,7 +4,7 @@ import 'package:foodapp/constant.dart';
 
 class ProductItem extends StatelessWidget {
   final String title;
-  final String descripiton;
+  final String descripton;
   final String price;
   final String calory;
   final String image;
@@ -12,7 +12,7 @@ class ProductItem extends StatelessWidget {
   const ProductItem({
     super.key,
     this.title = "",
-    this.descripiton = "",
+    this.descripton = "",
     this.calory = "",
     this.price = "",
     this.image = "",
@@ -53,7 +53,7 @@ class ProductItem extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  descripiton,
+                  descripton,
                   style: TextStyle(
                       color: black.withOpacity(0.35),
                       fontSize: 14,
@@ -85,7 +85,7 @@ class ProductItem extends StatelessWidget {
                   height: gap,
                 ),
                 Text(
-                  "\₹" + price,
+                  "₹" + price,
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 )
               ],
@@ -106,7 +106,9 @@ class ProductItem extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(100),
                 child: Container(
-                  child: Image.asset("assets/images/" + image),
+                  child: Hero(
+                      tag: tag, 
+                      child: Image.asset("assets/images/" + image)),
                 ),
               ),
             ),

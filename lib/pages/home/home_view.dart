@@ -159,51 +159,6 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  // Widget _getPopular() {
-  //   return Container(
-  //     padding: EdgeInsets.only(top: gap),
-  //     child: Column(
-  //       children: [
-  //         Container(
-  //           padding: EdgeInsets.only(left: gap, right: gap),
-  //           child: Row(
-  //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  //             children: [
-  //               Text(
-  //                 "Popular",
-  //                 style: TextStyle(
-  //                   fontWeight: FontWeight.bold,
-  //                   fontSize: 18,
-  //                 ),
-  //               ),
-  //               Text(
-  //                 'See all',
-  //                 style: TextStyle(
-  //                     color: black.withOpacity(.5),
-  //                     fontWeight: FontWeight.w600),
-  //               ),
-  //             ],
-  //           ),
-  //         ),
-  //         SizedBox(
-  //           height: gap,
-  //         ),
-  //         Column(
-  //           children: List.generate(PRODUCTS.length, (index) {
-  //             var product = PRODUCTS[index];
-  //             return ProductItem(
-  //               title: product["title"],
-  //               descripiton: product["desciption"],
-  //               calory: product["calories"],
-  //               price: product["price"],
-  //               image: product["image"],
-  //             );
-  //           }),
-  //         ),
-  //       ],
-  //     ),
-  //   );
-  // }
   Widget _getPopular() {
     return Container(
       padding: EdgeInsets.only(top: gap),
@@ -216,14 +171,17 @@ class HomeView extends GetView<HomeController> {
               children: [
                 Text(
                   "Popular",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),
                 ),
                 Text(
-                  "See all",
+                  'See all',
                   style: TextStyle(
-                      color: black.withOpacity(0.5),
+                      color: black.withOpacity(.5),
                       fontWeight: FontWeight.w600),
-                )
+                ),
               ],
             ),
           ),
@@ -243,7 +201,7 @@ class HomeView extends GetView<HomeController> {
                   child: ProductItem(
                     tag: product["id"],
                     title: product["title"],
-                    descripiton: product["description"],
+                    descripton: product["description"],
                     calory: product["calories"],
                     price: product["price"],
                     image: product["image"],
@@ -251,9 +209,73 @@ class HomeView extends GetView<HomeController> {
                 );
               }),
             ),
-          )
+          ),
+
+          // Column(
+          //   children: List.generate(PRODUCTS.length, (index) {
+          //     var product = PRODUCTS[index];
+          //     return ProductItem(
+          //       title: product["title"],
+          //       descripiton: product["desciption"],
+          //       calory: product["calories"],
+          //       price: product["price"],
+          //       image: product["image"],
+          //     );
+          //   }),
+          // ),
         ],
       ),
     );
   }
+  // Widget _getPopular() {
+  //   return Container(
+  //     padding: EdgeInsets.only(top: gap),
+  //     child: Column(
+  //       children: [
+  //         Container(
+  //           padding: EdgeInsets.only(left: gap, right: gap),
+  //           child: Row(
+  //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //             children: [
+  //               Text(
+  //                 "Popular",
+  //                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+  //               ),
+  //               Text(
+  //                 "See all",
+  //                 style: TextStyle(
+  //                     color: black.withOpacity(0.5),
+  //                     fontWeight: FontWeight.w600),
+  //               )
+  //             ],
+  //           ),
+  //         ),
+  //         SizedBox(
+  //           height: gap,
+  //         ),
+  //         Container(
+  //           padding: EdgeInsets.only(left: gap, right: gap),
+  //           child: Column(
+  //             children: List.generate(PRODUCTS.length, (index) {
+  //               var product = PRODUCTS[index];
+  //               return GestureDetector(
+  //                 onTap: () {
+
+  //                 },
+  //                 child: ProductItem(
+  //                   tag: product["id"],
+  //                   title: product["title"],
+  //                   descripiton: product["description"],
+  //                   calory: product["calories"],
+  //                   price: product["price"],
+  //                   image: product["image"],
+  //                 ),
+  //               );
+  //             }),
+  //           ),
+  //         )
+  //       ],
+  //     ),
+  //   );
+  // }
 }

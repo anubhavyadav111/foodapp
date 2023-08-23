@@ -1,5 +1,7 @@
 //define all the page here
 
+import 'package:foodapp/pages/detail/detail_binding.dart';
+import 'package:foodapp/pages/detail/detail_view.dart';
 import 'package:foodapp/pages/home/home_binding.dart';
 import 'package:foodapp/pages/home/home_view.dart';
 import 'package:foodapp/pages/root/root_binding.dart';
@@ -18,6 +20,11 @@ class AppRoutePage {
       name: AppRouteName.root,
       page: () => RootView(),
       binding: RootBinding(),
+    ),
+    GetPage(
+      name: AppRouteName.detail,
+      page: () => DetailView(),
+      binding: DetailBinding(),
     ),
   ];
 }
