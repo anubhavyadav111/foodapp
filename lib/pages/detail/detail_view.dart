@@ -109,7 +109,7 @@ class DetailView extends GetView<DetailController> {
               _getIcon(icon: "star.png", title: "5.0"),
             ]),
             Text(
-              "\$" + controller.data["price"],
+              "\₹" + controller.data["price"],
               style: TextStyle(
                   color: primary, fontWeight: FontWeight.bold, fontSize: 25),
             )

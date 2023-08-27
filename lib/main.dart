@@ -10,13 +10,13 @@ void main() {
 
 class FoodApp extends StatelessWidget {
   const FoodApp({super.key});
- 
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       getPages: AppRoutePage.routes,
       initialRoute: AppRouteName.root,
-
+      debugShowCheckedModeBanner: false,
       // define default style
       theme: ThemeData(
         primaryColor: primary,
